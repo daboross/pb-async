@@ -5,7 +5,7 @@ pb-async
 
 [![crates.io version badge][cratesio-badge]][pb-async-crate]
 
-Asynchronous pushbullet client for [Rust].
+Asynchronous [Rust] PushBullet client.
 
 Not official nor associated with PushBullet in any way.
 
@@ -17,6 +17,8 @@ Uses [`hyper`] and [`native-tls`] to make connections.
 
 ```rust
 let token = std::env::var("PUSHBULLET_TOKEN")?;
+
+let client = pb_async::Client::new(&token).unwrap();
 
 tokio::run(
     client.push(
@@ -35,10 +37,9 @@ tokio::run(
 - [documentation][pb-async-docs]
 - [crates.io page][pb-async-crate]
 
-
 ### API Completion
 
-API implemented:
+Implemented:
 - authentication via user auth token
 - list-devices: listing user devices
 - create-push: creating a new push
@@ -55,15 +56,15 @@ Not Implemented:
 
 ### Maintenance Status
 
-`pb-async` is a hobby library maintained by @daboross. I intend to maintain the project into the future and upate to any future versions of `tokio`, `hyper` and the PushBullet API.
+`pb-async` is a hobby library. I intend to maintain the project and update for any future versions of `tokio`, `hyper` and the PushBullet API.
 
-However, I will not be implementing new features. I'll review and include Pull Requests for new functionality, but will not work on any of it myself.
+I will not, however, be implementing new features. Pull Requests will be appreciated, reviewed and accepted, but I have no other plans to further this library.
 
 ### Contributing
 
 Contributions are welcome.
 
-See [CONTRIBUTING](./CONTRIBUTING.md) for technical information on contributing.
+See [CONTRIBUTING](./CONTRIBUTING.md) for more information.
 
 [Rust]: https://www.rust-lang.org/
 [PushBullet v2 API]: https://docs.pushbullet.com
