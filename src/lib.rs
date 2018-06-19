@@ -219,7 +219,6 @@ impl Client {
 
         let post_data = serde_json::to_string(&Push { target, data }).unwrap();
 
-        debug!("posting body to start-push: {}", post_data);
         self.post("pushes", post_data.into()).map(|_resp| ())
     }
 
@@ -372,7 +371,7 @@ impl Client {
                 .header(TOKEN_HEADER, self.token.clone()),
         ).body(body)
             .expect("expected request to be well-formed");
-        debug!("sending request: {:#?}", request);
+        debug!("sending request: {:?}", request);
         self.client
             .request(request)
             .and_then(|response| {
