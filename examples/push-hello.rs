@@ -18,7 +18,7 @@ fn main() {
                 .push(
                     pb_async::PushTarget::SelfUser {},
                     pb_async::PushData::Note {
-                        title: "User Greetings",
+                        title: "",
                         body: "Hello, user!",
                     },
                 )

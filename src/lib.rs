@@ -29,7 +29,7 @@
 //!     client.push(
 //!         pb_async::PushTarget::SelfUser {},
 //!         pb_async::PushData::Note {
-//!             title: "User Greetings",
+//!             title: "",
 //!             body: "Hello, user!",
 //!         },
 //!     ).or_else(|error| {
@@ -194,7 +194,7 @@ impl Client {
     ///     client.push(
     ///         pb_async::PushTarget::SelfUser {},
     ///         pb_async::PushData::Note {
-    ///             title: "User Greetings",
+    ///             title: "",
     ///             body: "Hello, user!",
     ///         },
     ///     ).or_else(|error| {
