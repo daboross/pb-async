@@ -1,0 +1,40 @@
+[package]
+name = "pb-async"
+# Remember to update html_root_url in src/lib.rs with each version.
+version = "0.0.1"
+authors = ["David Ross <daboross@daboross.net>"]
+description = "Asynchronous client for the PushBullet API"
+
+documentation = "https://docs.rs/pb-async/"
+repository = "https://github.com/daboross/pb-async"
+readme = "README.md"
+
+license = "MIT"
+keywords = ["log", "logging", "logger"]
+categories = ["development-tools::debugging"]
+
+include = ["Cargo.toml", "src/**/*", "tests/**/*", "examples/**/*", "LICENSE", "README.md", "CONTRIBUTING.md"]
+
+[badges]
+travis-ci = { repository = "daboross/pb-async" }
+appveyor = { repository = "daboross/pb-async" }
+maintenance = { status = "passively-maintained" }
+
+[dependencies]
+mpart-async = "0.1"
+bytes = "0.4"
+log = "0.4"
+hyper = "0.12"
+futures = "0.1"
+http = "0.1"
+hyper-tls = "0.2"
+failure = { version = "0.1", default-features = false }
+failure_derive = { version = "0.1" }
+serde = "1"
+serde_derive = "1"
+serde_json = "1"
+
+[dev-dependencies]
+dotenv = "0.13"
+tokio = "0.1"
+env_logger = "0.5"
