@@ -1,7 +1,7 @@
 [package]
 name = "pb-async"
 # Remember to update html_root_url in src/lib.rs with each version.
-version = "0.1.0"
+version = "0.1.1"
 authors = ["David Ross <daboross@daboross.net>"]
 description = "Asynchronous client for the PushBullet API"
 
@@ -27,7 +27,7 @@ log = "0.4"
 hyper = "0.12"
 futures = "0.1"
 http = "0.1"
-hyper-tls = "0.2"
+hyper-tls = "0.3.0"
 failure = { version = "0.1", default-features = false }
 failure_derive = { version = "0.1" }
 serde = "1"
